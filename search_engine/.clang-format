@@ -1,0 +1,125 @@
+#
+# TRC Core Engineering clang-format v1.1  2016.09.07
+# Requires clang-format 3.9.0 trc.1
+#
+
+Language:        Cpp
+AccessModifierOffset: -4
+AlignAfterOpenBracket: true
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AlignEscapedNewlinesLeft: true
+AlignOperands:   true
+AlignTrailingComments: true
+AlignTokenMaxPadding: 20
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AlwaysBreakAfterDefinitionReturnType: false
+AlwaysBreakTemplateDeclarations: true
+AlwaysBreakBeforeMultilineStrings: true
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterClass: true
+    AfterControlStatement: true
+    AfterEnum: true
+    AfterFunction: true
+    AfterNamespace: false
+    AfterObjCDeclaration: true
+    AfterStruct: true
+    AfterUnion: true
+    BeforeCatch: true
+    BeforeElse: true
+    BeforeCaseBreak: false
+    IndentBraces: false
+
+BreakBeforeBinaryOperators: true
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializersBeforeComma: true
+BreakStringLiterals: false
+BinPackParameters: false
+BinPackArguments: false
+ColumnLimit:     120
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+ConstructorInitializerIndentWidth: 4
+DerivePointerAlignment: false
+ExperimentalAutoDetectBinPacking: false
+IndentCaseLabels: false
+IndentWrappedFunctionNames: false
+IndentFunctionDeclarationAfterType: false
+IncludeCategories:
+ - Regex:    '^"[^/]*"'              # Local includes first
+   Priority: 10
+ - Regex:    '^<atom_'
+   Priority: 50
+ - Regex:    '^<atom/'
+   Priority: 55
+ - Regex:    '^<(gti/|main/|sms/|specific/)'
+   Priority: 60
+ - Regex:    '^<gti_'
+   Priority: 65
+ - Regex:    '^(<gti_client/|<base/|<util/|<admin/|<alert/|<auth/)'
+   Priority: 85
+ - Regex:    '^<tae'
+   Priority: 126
+ - Regex:    '^<tte'
+   Priority: 127
+ - Regex:    '^<tce'
+   Priority: 128
+ - Regex:    '^<tde'
+   Priority: 129
+ - Regex:    '^<tcc/'
+   Priority: 130
+ - Regex:    '^<gtest/'
+   Priority: 300
+ - Regex:    '^<boost/'                # Third party headers
+   Priority: 150
+ - Regex:    '^(<linux/|<sys|<asm/)'   # C system headers
+   Priority: 160
+ - Regex:    '^<[^/.]*\>'    # C++ stl headers
+   Priority: 180
+ - Regex:    '^<[^/]*\.h>'   # C headers
+   Priority: 200
+ - Regex:    '^(<[^/]*/)'    # Tower headers
+   Priority: 100
+NestedMacroIndent: true
+MaxEmptyLinesToKeep: 3
+KeepEmptyLinesAtTheStartOfBlocks: true
+NamespaceIndentation: None
+ObjCBlockIndentWidth: 4
+ObjCSpaceAfterProperty: false
+ObjCSpaceBeforeProtocolList: false
+PenaltyBreakBeforeFirstCallParameter: 1
+PenaltyBreakComment: 300
+PenaltyBreakString: 1000
+PenaltyBreakFirstLessLess: 120
+PenaltyExcessCharacter: 100
+PenaltyReturnTypeOnItsOwnLine: 200
+PenaltyBreakOnLogicalOperators: 100
+PointerAlignment: Left
+SpacesBeforeTrailingComments: 2
+Cpp11BracedListStyle: true
+Standard:        Auto
+IndentWidth:     4
+TabWidth:        4
+UseTab:          Never
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+SpacesInAngles:  false
+SpaceInEmptyParentheses: false
+SpacesInCStyleCastParentheses: false
+SpaceAfterCStyleCast: false
+SpacesInContainerLiterals: true
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeTypeEllipsis: true
+ContinuationIndentWidth: 4
+CommentPragmas:  '^ IWYU pragma:'
+ForEachMacros:   [ foreach, Q_FOREACH, BOOST_FOREACH ]
+LeaveAsIsRegex: '^TDE_DEFINE_ENUM$|^T.._COLD_NOINLINE_CODE$|^TEST$|^TEST_F$|^TYPED_TEST'
+SpaceBeforeParens: ControlStatements
+DisableFormat:   false
+
