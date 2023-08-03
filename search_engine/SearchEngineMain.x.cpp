@@ -52,12 +52,12 @@ int main()
         }
         else if (tokens[0] == "queryFindPagesWhichContainWord" && tokens.size() == 2)
         {
-            std::string wordToFind = PreProcess::toLower(tokens[1]);
+            std::string wordToFind = PreProcess::preprocess(tokens[1]);
             searchEngine.findPagesContainingWord(wordToFind);
         }
         else if (tokens[0] == "queryFindPositionsOfWordInAPage" && tokens.size() == 3)
         {
-            std::string wordToFind      = PreProcess::toLower(tokens[1]);
+            std::string wordToFind = PreProcess::preprocess(tokens[1]);
             const std::string& pageName = tokens[2];
             searchEngine.queryFindPositionsOfWordInAPage(wordToFind, pageName);
         }
